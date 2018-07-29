@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng2-loading-spinner": [
+        "dist/ng2-loading-spinner"
+      ],
+      "ng2-loading-spinner/*": [
+        "dist/ng2-loading-spinner/*"
+      ]
+    }
   }
 }
