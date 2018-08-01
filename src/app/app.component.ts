@@ -9,7 +9,7 @@ export class AppComponent {
     show = false;
 
     loadingCongif = {
-        animationType: 'bouncingDots',
+        animationType: 'fadingCircle',
         spinnerPosition: 'left'
     };
 
