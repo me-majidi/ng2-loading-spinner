@@ -3,7 +3,8 @@ export interface INg2LoadingSpinnerConfig {
     backdropColor?: string,
     backdropBorderRadius?: string,
     spinnerColor?: string,
-    spinnerPosition?: string
+    spinnerPosition?: string,
+    spinnerSize?: string
 }
 
 export class Ng2LoadingSpinnerConfig implements INg2LoadingSpinnerConfig {
@@ -12,6 +13,7 @@ export class Ng2LoadingSpinnerConfig implements INg2LoadingSpinnerConfig {
     spinnerColor: string;
     spinnerPosition: string;
     backdropBorderRadius: string;
+    spinnerSize: string;
 
     constructor(config : INg2LoadingSpinnerConfig) {
         this.animationType = config.animationType;
@@ -19,5 +21,6 @@ export class Ng2LoadingSpinnerConfig implements INg2LoadingSpinnerConfig {
         this.spinnerColor = config.spinnerColor;
         this.spinnerPosition = config.spinnerPosition;
         this.backdropBorderRadius = config.backdropBorderRadius;
+        this.spinnerSize = config.spinnerSize;
     }
 }

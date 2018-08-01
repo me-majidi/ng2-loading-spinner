@@ -13,7 +13,8 @@ export class ConfigService {
             backdropColor  : 'rgba(0, 0, 0, 0.3)',
             spinnerColor   : '#fff',
             spinnerPosition: 'center',
-            backdropBorderRadius: '0'
+            backdropBorderRadius: '0',
+            spinnerSize: 'md'
         };
     }
 

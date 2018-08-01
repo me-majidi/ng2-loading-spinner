@@ -10,7 +10,7 @@ import { Ng2LoadingSpinnerConfig } from './config';
 
         <div class="wrapper"
              [ngClass]="config.spinnerPosition"
-             [ngStyle]="{'color': config.spinnerColor}">
+             [ngStyle]="{'color': config.spinnerColor, 'font-size': config.spinnerSize}">
             <ng-container *ngIf="!template">
                 <!-- DUAL CIRCLE SPINNER -->
                 <div *ngIf="config?.animationType === ANIMATION_TYPES.dualCircle"
@@ -113,6 +113,29 @@ import { Ng2LoadingSpinnerConfig } from './config';
       }
 
       /***********************/
+      /* SIZING      SPINNER */
+      /***********************/
+      .xs {
+        font-size: .5rem;
+      }
+      
+      .sm {
+        font-size: .8rem;
+      }
+      
+      .md {
+        font-size: 1rem;
+      }
+      
+      .lg {
+        font-size: 1.2rem;
+      }
+      
+      .xl {
+        font-size: 1.4rem;
+      }
+
+      /***********************/
       /* DUAL CIRCLE SPINNER */
       /***********************/
       .dual-circle {
@@ -163,7 +186,7 @@ import { Ng2LoadingSpinnerConfig } from './config';
         color                   : currentColor;
         text-indent             : -9999em;
         position                : relative;
-        font-size               : 5px;
+        font-size               : inherit;
         -webkit-transform       : translateZ(0);
         -ms-transform           : translateZ(0);
         transform               : translateZ(0);
@@ -219,7 +242,7 @@ import { Ng2LoadingSpinnerConfig } from './config';
       /***********************/
       .chasing-dots {
         color             : currentColor;
-        font-size         : 20px;
+        font-size         : inherit;
         text-indent       : -9999em;
         overflow          : hidden;
         width             : 1em;
@@ -306,7 +329,7 @@ import { Ng2LoadingSpinnerConfig } from './config';
       /***********************/
 
       .bouncing-dots {
-        font-size  : 15px;
+        font-size  : inherit;
         text-align : center;
       }
 
@@ -351,7 +374,7 @@ import { Ng2LoadingSpinnerConfig } from './config';
       /***********************/
       
       .fading-circle {
-        font-size: 15px;
+        font-size: inherit;
         width    : 2em;
         height   : 2em;
         position : relative;
