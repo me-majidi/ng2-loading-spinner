@@ -136,6 +136,7 @@
                     <div class="col-4">
                         <input id="backdropColor"
                                class="form-control"
+                               [cpAlphaChannel]="'always'"
                                [(colorPicker)]="loadingConfig.backdropColor"
                                [style.background]="loadingConfig.backdropColor">
                     </div>
@@ -164,6 +165,7 @@
                     <div class="col-4">
                         <input id="spinnerColor"
                                class="form-control"
+                               [cpAlphaChannel]="'always'"
                                [(colorPicker)]="loadingConfig.spinnerColor"
                                [style.background]="loadingConfig.spinnerColor">
                     </div>

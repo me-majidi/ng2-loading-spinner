@@ -15,7 +15,7 @@ export class ConfigService {
             spinnerPosition: 'center',
             backdropBorderRadius: '0',
             spinnerSize: 'md',
-            spinnerFontSize: '1rem'
+            spinnerFontSize: ''
         };
     }
 
@@ -23,6 +23,10 @@ export class ConfigService {
         if (!config) {
             config = this.defaultConfig;
             return config;
+        }
+
+        if (config.spinnerSize === '') {
+            config.spinnerFontSize = '1rem';
         }
 
         for (let option in this.defaultConfig) {
