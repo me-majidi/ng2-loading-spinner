@@ -14,7 +14,8 @@ export class ConfigService {
             spinnerColor   : '#fff',
             spinnerPosition: 'center',
             backdropBorderRadius: '0',
-            spinnerSize: 'md'
+            spinnerSize: 'md',
+            spinnerFontSize: '1rem'
         };
     }
 

@@ -10,7 +10,7 @@ import { Ng2LoadingSpinnerConfig } from './config';
 
         <div class="wrapper"
              [ngClass]="[config.spinnerPosition, config.spinnerSize]"
-             [ngStyle]="{'color': config.spinnerColor, 'font-size': config.spinnerSize}">
+             [ngStyle]="{'color': config.spinnerColor, 'font-size': config.spinnerFontSize}">
             <ng-container *ngIf="!template">
                 <!-- DUAL CIRCLE SPINNER -->
                 <div *ngIf="config?.animationType === ANIMATION_TYPES.dualCircle"

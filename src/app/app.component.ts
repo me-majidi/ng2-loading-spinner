@@ -12,6 +12,7 @@ export class AppComponent {
     @ViewChild('customTemplate') customTemplate: TemplateRef<any>;
     show = false;
     borderRadius = 15;
+    fontSize = 16;
     template = null;
 
     loadingConfig: INg2LoadingSpinnerConfig = {
@@ -20,7 +21,8 @@ export class AppComponent {
         spinnerColor   : '#fff',
         spinnerPosition: 'center',
         backdropBorderRadius: '15px',
-        spinnerSize: 'md'
+        spinnerSize: 'md',
+        spinnerFontSize: '1rem'
     };
 
     btnLoadingConfig: INg2LoadingSpinnerConfig = {
@@ -42,6 +44,8 @@ export class AppComponent {
 
     onChangeOptions(form: NgForm) {
         this.loadingConfig.backdropBorderRadius = form.value.backdropBorderRadius + 'px';
+        this.loadingConfig.spinnerFontSize = form.value.spinnerFontSize + 'px';
+
 
         if (form.value.customTemplate) {
             this.template = this.customTemplate;
