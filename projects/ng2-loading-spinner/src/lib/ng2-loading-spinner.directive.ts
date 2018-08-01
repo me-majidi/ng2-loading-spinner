@@ -10,7 +10,7 @@ export class Ng2LoadingSpinnerDirective implements OnInit, OnChanges, OnDestroy 
 
     @Input('ng2-loading') show;
     @Input() config;
-    @Input() template: TemplateRef;
+    @Input() template: TemplateRef<any>;
 
     private spinnerComponentRef: ComponentRef<Ng2LoadingSpinnerComponent>;
 

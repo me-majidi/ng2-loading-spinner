@@ -9,7 +9,7 @@ export class AppComponent {
     show = false;
 
     loadingCongif = {
-        backdropColor: 'transparent',
+        animationType: 'chasingDots',
         spinnerPosition: 'left'
     };
 
