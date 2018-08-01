@@ -38,8 +38,8 @@ export class AppComponent {
     showLoading() {
         this.show = true;
         setTimeout(() => {
-//            this.show = false;
-        }, 2000);
+            this.show = false;
+        }, 1500);
     }
 
     onChangeOptions(form: NgForm) {

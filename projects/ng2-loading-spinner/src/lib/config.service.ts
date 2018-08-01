@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { INg2LoadingSpinnerConfig, Ng2LoadingSpinnerConfig } from './config';
+import { INg2LoadingSpinnerConfig } from './config';
 import { ANIMATION_TYPES } from './animation-types';
 
 @Injectable()

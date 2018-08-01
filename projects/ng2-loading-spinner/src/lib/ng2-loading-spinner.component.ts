@@ -86,15 +86,15 @@ import { Ng2LoadingSpinnerConfig } from './config';
         right     : 5px;
         transform : translateY(-50%);
       }
-      
+
       .top {
-        top: 5px;
-        left: 50%;
-        transform: translateX(-50%);
+        top       : 5px;
+        left      : 50%;
+        transform : translateX(-50%);
       }
       
       .bottom {
-        bottom: 5px;
+        bottom    : 5px;
         left      : 50%;
         transform : translateX(-50%);
       }
@@ -182,19 +182,19 @@ import { Ng2LoadingSpinnerConfig } from './config';
       .center .scaling-bars,
       .top .scaling-bars,
       .bottom .scaling-bars {
-        left: 0;
+        left : 0;
       }
-      
+
       .left .scaling-bars,
       .top-left .scaling-bars,
       .top-bottom .scaling-bars {
-        left: 1.5em;
+        left : 1.5em;
       }
-      
+
       .right .scaling-bars,
       .top-right .scaling-bars,
       .bottom-right .scaling-bars {
-        right: 1.5em;
+        right : 1.5em;
       }
 
       .scaling-bars,
