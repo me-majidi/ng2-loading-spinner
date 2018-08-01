@@ -6,7 +6,7 @@ import { Ng2LoadingSpinnerConfig } from './config';
     selector: 'ng2-loading-spinner',
     template: `
         <div class="backdrop"
-             [ngStyle]="{'background-color': config.backdropColor}"></div>
+             [ngStyle]="{'background-color': config.backdropColor, 'border-radius': config.backdropBorderRadius}"></div>
 
         <div class="wrapper"
              [ngClass]="config.spinnerPosition"
