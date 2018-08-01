@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ANIMATION_TYPES } from '../../projects/ng2-loading-spinner/src/public_api';
 
 @Component({
     selector   : 'app-root',
@@ -9,7 +10,7 @@ export class AppComponent {
     show = false;
 
     loadingCongif = {
-        animationType: 'fadingCircle',
+        animationType: ANIMATION_TYPES.dualCircle,
         spinnerPosition: 'left'
     };
 
@@ -19,7 +20,7 @@ export class AppComponent {
     login() {
         this.show = true;
         setTimeout(() => {
-//            this.show = false;
+            this.show = false;
         }, 1700);
     }
 }
