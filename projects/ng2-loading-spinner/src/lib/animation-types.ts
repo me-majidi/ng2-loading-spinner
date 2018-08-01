@@ -1,5 +1,6 @@
 export const ANIMATION_TYPES  = {
     dualCircle: 'dualCircle',
     scalingBars: 'scalingBars',
-    chasingDots: 'chasingDots'
+    chasingDots: 'chasingDots',
+    bouncingDots: 'bouncingDots'
 };

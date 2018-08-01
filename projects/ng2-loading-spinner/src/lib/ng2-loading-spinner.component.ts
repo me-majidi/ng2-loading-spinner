@@ -5,24 +5,37 @@ import { Ng2LoadingSpinnerConfig } from './config';
 @Component({
     selector: 'ng2-loading-spinner',
     template: `
-        <div class="backdrop" [ngStyle]="{'background-color': config.backdropColor}"></div>
-        
-        <div class="wrapper" [ngClass]="config.spinnerPosition"
+        <div class="backdrop"
+             [ngStyle]="{'background-color': config.backdropColor}"></div>
+
+        <div class="wrapper"
+             [ngClass]="config.spinnerPosition"
              [ngStyle]="{'color': config.spinnerColor}">
             <ng-container *ngIf="!template">
                 <!-- DUAL CIRCLE SPINNER -->
                 <div *ngIf="config?.animationType === ANIMATION_TYPES.dualCircle"
                      class="dual-circle"></div>
-                
-                
+
+
                 <!-- SCALING BARS -->
-                <div *ngIf="config?.animationType === ANIMATION_TYPES.scalingBars" class="scaling-bars"></div>
-                
-                
+                <div *ngIf="config?.animationType === ANIMATION_TYPES.scalingBars"
+                     class="scaling-bars"></div>
+
+
                 <!-- CHASING DOTS -->
-                <div *ngIf="config?.animationType === ANIMATION_TYPES.chasingDots" class="chasing-dots"></div>
+                <div *ngIf="config?.animationType === ANIMATION_TYPES.chasingDots"
+                     class="chasing-dots"></div>
+
+
+                <!-- BOUNCING DOTS -->
+                <div *ngIf="config?.animationType === ANIMATION_TYPES.bouncingDots"
+                     class="bouncing-dots">
+                    <div class="bounce-1"></div>
+                    <div class="bounce-2"></div>
+                    <div class="bounce-3"></div>
+                </div>
             </ng-container>
-            
+
             <ng-container *ngTemplateOutlet="template"
                           ngStyle="styles"></ng-container>
         </div>
@@ -35,12 +48,12 @@ import { Ng2LoadingSpinnerConfig } from './config';
         left             : 0;
         right            : 0;
         bottom           : 0;
-        z-index: 2000;
+        z-index          : 2000;
       }
 
       .wrapper {
         position : absolute;
-        z-index: 2001;
+        z-index  : 2001;
       }
 
       /* POSITIONING SPINNER */
@@ -116,9 +129,9 @@ import { Ng2LoadingSpinnerConfig } from './config';
       /***********************/
 
       .scaling-bars {
-        left: 1.5em;
+        left : 1.5em;
       }
-      
+
       .scaling-bars,
       .scaling-bars:before,
       .scaling-bars:after {
@@ -184,12 +197,6 @@ import { Ng2LoadingSpinnerConfig } from './config';
         }
       }
 
-      
-      
-      
-      
-      
-      
       /***********************/
       /* CHASING DOTS SPINNER */
       /***********************/
@@ -274,6 +281,51 @@ import { Ng2LoadingSpinnerConfig } from './config';
         100% {
           -webkit-transform : rotate(360deg);
           transform         : rotate(360deg);
+        }
+      }
+
+      /***********************/
+      /* BOUNCING DOTS SPINNER */
+      /***********************/
+
+      .bouncing-dots {
+        font-size  : 15px;
+        text-align : center;
+      }
+
+      .bouncing-dots > div {
+        width             : 1em;
+        height            : 1em;
+        background-color  : currentColor;
+        border-radius     : 100%;
+        display           : inline-block;
+        -webkit-animation : sk-bouncedelay 1.4s infinite ease-in-out both;
+        animation         : sk-bouncedelay 1.4s infinite ease-in-out both;
+      }
+
+      .bouncing-dots .bounce-1 {
+        -webkit-animation-delay : -0.32s;
+        animation-delay         : -0.32s;
+      }
+
+      .bouncing-dots .bounce-2 {
+        -webkit-animation-delay : -0.16s;
+        animation-delay         : -0.16s;
+      }
+
+      @-webkit-keyframes sk-bouncedelay {
+        0%, 80%, 100% { -webkit-transform : scale(0) }
+        40% { -webkit-transform : scale(1.0) }
+      }
+
+      @keyframes sk-bouncedelay {
+        0%, 80%, 100% {
+          -webkit-transform : scale(0);
+          transform         : scale(0);
+        }
+        40% {
+          -webkit-transform : scale(1.0);
+          transform         : scale(1.0);
         }
       }
     ` ]

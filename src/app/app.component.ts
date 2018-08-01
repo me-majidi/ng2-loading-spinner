@@ -9,7 +9,7 @@ export class AppComponent {
     show = false;
 
     loadingCongif = {
-        animationType: 'chasingDots',
+        animationType: 'bouncingDots',
         spinnerPosition: 'left'
     };
 
@@ -19,7 +19,7 @@ export class AppComponent {
     login() {
         this.show = true;
         setTimeout(() => {
-            this.show = false;
+//            this.show = false;
         }, 1700);
     }
 }
