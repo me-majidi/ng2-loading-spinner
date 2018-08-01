@@ -9,7 +9,7 @@ import { Ng2LoadingSpinnerConfig } from './config';
              [ngStyle]="{'background-color': config.backdropColor, 'border-radius': config.backdropBorderRadius}"></div>
 
         <div class="wrapper"
-             [ngClass]="config.spinnerPosition"
+             [ngClass]="[config.spinnerPosition, config.spinnerSize]"
              [ngStyle]="{'color': config.spinnerColor, 'font-size': config.spinnerSize}">
             <ng-container *ngIf="!template">
                 <!-- DUAL CIRCLE SPINNER -->
@@ -34,10 +34,11 @@ import { Ng2LoadingSpinnerConfig } from './config';
                     <div class="bounce-2"></div>
                     <div class="bounce-3"></div>
                 </div>
-                
-                
+
+
                 <!-- FADING CIRCLE -->
-                <div *ngIf="config?.animationType === ANIMATION_TYPES.fadingCircle" class="fading-circle">
+                <div *ngIf="config?.animationType === ANIMATION_TYPES.fadingCircle"
+                     class="fading-circle">
                     <div class="sk-circle1 sk-circle"></div>
                     <div class="sk-circle2 sk-circle"></div>
                     <div class="sk-circle3 sk-circle"></div>
@@ -116,23 +117,23 @@ import { Ng2LoadingSpinnerConfig } from './config';
       /* SIZING      SPINNER */
       /***********************/
       .xs {
-        font-size: .5rem;
+        font-size : 0.5rem;
       }
-      
+
       .sm {
-        font-size: .8rem;
+        font-size : 1rem;
       }
-      
+
       .md {
-        font-size: 1rem;
+        font-size : 1.5rem;
       }
-      
+
       .lg {
-        font-size: 1.2rem;
+        font-size : 2rem;
       }
-      
+
       .xl {
-        font-size: 1.4rem;
+        font-size : 2.5rem;
       }
 
       /***********************/
@@ -140,17 +141,15 @@ import { Ng2LoadingSpinnerConfig } from './config';
       /***********************/
       .dual-circle {
         display : inline-block;
-        width   : 35px;
-        height  : 35px;
       }
 
       .dual-circle:after {
         content       : " ";
         display       : block;
-        width         : 35px;
-        height        : 35px;
+        width         : 1.5em;
+        height        : 1.5em;
         border-radius : 50%;
-        border        : 4px solid currentColor;
+        border        : .1em solid currentColor;
         border-color  : currentColor transparent currentColor transparent;
         animation     : dual-cricle-anim 1.2s linear infinite;
       }
@@ -242,7 +241,7 @@ import { Ng2LoadingSpinnerConfig } from './config';
       /***********************/
       .chasing-dots {
         color             : currentColor;
-        font-size         : inherit;
+        font-size         : 1.5em;
         text-indent       : -9999em;
         overflow          : hidden;
         width             : 1em;
@@ -372,12 +371,12 @@ import { Ng2LoadingSpinnerConfig } from './config';
       /***********************/
       /* FADING CIRCLE SPINNER */
       /***********************/
-      
+
       .fading-circle {
-        font-size: inherit;
-        width    : 2em;
-        height   : 2em;
-        position : relative;
+        font-size : inherit;
+        width     : 2em;
+        height    : 2em;
+        position  : relative;
       }
 
       .fading-circle .sk-circle {

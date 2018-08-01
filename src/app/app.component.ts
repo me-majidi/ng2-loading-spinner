@@ -19,13 +19,15 @@ export class AppComponent {
         backdropColor  : 'rgba(0, 0, 0, 0.3)',
         spinnerColor   : '#fff',
         spinnerPosition: 'center',
-        backdropBorderRadius: '15px'
+        backdropBorderRadius: '15px',
+        spinnerSize: 'md'
     };
 
     btnLoadingConfig: INg2LoadingSpinnerConfig = {
         animationType: ANIMATION_TYPES.fadingCircle,
         backdropColor: 'transparent',
-        spinnerPosition: 'left'
+        spinnerPosition: 'left',
+        spinnerSize: 'xs'
     };
 
     constructor () {
