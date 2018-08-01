@@ -280,3 +280,12 @@ nav {
     }
 }
 
+
+*:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: #424242;
+}

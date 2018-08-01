@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
     styleUrls  : [ './app.component.scss' ]
 })
 export class AppComponent {
-    @ViewChild('customTemplate') customTemplate: TemplateRef;
+    @ViewChild('customTemplate') customTemplate: TemplateRef<any>;
     show = false;
     borderRadius = 15;
     template = null;
@@ -20,6 +20,12 @@ export class AppComponent {
         spinnerColor   : '#fff',
         spinnerPosition: 'center',
         backdropBorderRadius: '15px'
+    };
+
+    btnLoadingConfig: INg2LoadingSpinnerConfig = {
+        animationType: ANIMATION_TYPES.fadingCircle,
+        backdropColor: 'transparent',
+        spinnerPosition: 'left'
     };
 
     constructor () {

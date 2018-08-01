@@ -18,7 +18,7 @@
     </div>
     <div class="py-5 container">
         <h1 class="mb-4">ng2-loading-spinner</h1>
-        <h3>loading spinner component for Angular 4+ applications</h3>
+        <h3>loading spinner directive for Angular 4+ applications</h3>
         <a class="d-inline-block"
            href="https://www.npmjs.com/package/ng-jalali-calendar">
             <svg
@@ -163,7 +163,9 @@
                     </div>
                 </div>
             </form>
-            <button class="btn btn-dark text-white"
+            <button class="btn btn-dark text-white px-5"
+                    [ng2-loading]="show"
+                    [config]="btnLoadingConfig"
                     (click)="showLoading()">
                 Show Spinner
             </button>
