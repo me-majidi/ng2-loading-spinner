@@ -61,29 +61,139 @@
         </a>
     </div>
 </nav>
-<main class="mt-5">
+<main class="mt-5 container">
+    <div class="row main-row">
+        <div class="col-12 col-md-6">
+            <h5 class="font-weight-bold mb-5">Options</h5>
+            <form #optionsForm="ngForm" (change)="onChangeOptions(optionsForm)">
+                <div class="form-group row">
+                    <label for="animationType"
+                           class="col-7">Animation type
+                    </label>
+                    <div class="col-4">
+                        <select class="custom-select my-1 mr-sm-2"
+                                [(ngModel)]="loadingConfig.animationType"
+                                name="animationType"
+                                id="animationType">
+                            <option value="dualCircle" selected>dualCircle</option>
+                            <option value="scalingBars">scalingBars</option>
+                            <option value="chasingDots">chasingDots</option>
+                            <option value="bouncingDots">bouncingDots</option>
+                            <option value="fadingCircle">fadingCircle</option>
+                        </select>
+                    </div>
+                </div>
 
+                <div class="form-group row">
+                    <label for="spinnerPosition"
+                           class="col-7">Spinner position
+                    </label>
+                    <div class="col-4">
+                        <select
+                                name="spinnerPosition"
+                                [(ngModel)]="loadingConfig.spinnerPosition"
+                                class="custom-select my-1 mr-sm-2"
+                                id="spinnerPosition">
+                            <option value="center">center</option>
+                            <option value="top">top</option>
+                            <option value="right">right</option>
+                            <option value="bottom">bottom</option>
+                            <option value="left">left</option>
+                            <option value="top-right">top-right</option>
+                            <option value="top-left">top-left</option>
+                            <option value="bottom-right">bottom-right</option>
+                            <option value="bottm-left">bottm-left</option>
+                        </select>
+                    </div>
+                </div>
 
-    <ng-template #template>
-        <div class="ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+                <div class="form-group row">
+                    <label for="backdropColor"
+                           class="col-7">Backdrop color
+                    </label>
+                    <div class="col-4">
+                        <input id="backdropColor"
+                               class="form-control"
+                               [(colorPicker)]="loadingConfig.backdropColor"
+                               [style.background]="loadingConfig.backdropColor">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="spinnerColor"
+                           class="col-7">Spinner color
+                    </label>
+                    <div class="col-4">
+                        <input id="spinnerColor"
+                               class="form-control"
+                               [(colorPicker)]="loadingConfig.spinnerColor"
+                               [style.background]="loadingConfig.spinnerColor">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="backdropBorderRadius"
+                           class="col-7">Backdrop border-radius
+                    </label>
+                    <div class="col-4">
+                        <input
+                              name="backdropBorderRadius"
+                              [(ngModel)]="borderRadius"
+                              type="number"
+                              class="form-control"
+                              id="backdropBorderRadius">
+                    </div>
+                </div>
+            </form>
+            <button class="btn btn-dark text-white"
+                    (click)="showLoading()">
+                Show Spinner
+            </button>
         </div>
-    </ng-template>
-
-    <div class="container spinners-gallery">
-        <div class="row w-100">
-            <div class="col-4 position-relative">
-                <button [ng2-loading]="show"
-                        [config]="loadingCongif"
-                        [template]=""
-                        class="btn btn-success btn-block position-relative py-3"
-                        (click)="login()">
-                    Login
-                </button>
+        <div class="col-12 col-md-6 card-wrapper">
+            <div class="card mt-5 mt-md-0 mx-auto ml-md-auto"
+                 [ng2-loading]="show"
+                 [template]="customTemplate"
+                 [config]="loadingConfig">
+                <p class="font-weight-bold text-center text-muted">LOGIN</p>
+                <form class="d-flex flex-column">
+                    <label class="sr-only"
+                           for="username">Username
+                    </label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                        </div>
+                        <input type="text"
+                               class="form-control"
+                               id="username"
+                               placeholder="Username">
+                    </div>
+                    <label class="sr-only"
+                           for="password">Password
+                    </label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                        </div>
+                        <input type="text"
+                               class="form-control"
+                               id="password"
+                               placeholder="Username">
+                    </div>
+                    <a class="btn btn-success d-inline-block px-5 py-2 text-white"
+                       (click)="showLoading()">Login
+                    </a>
+                </form>
             </div>
         </div>
     </div>
 </main>
+
+
+
+
+
+<ng-template #customTemplate>
+    <span>Please wait</span>
+</ng-template>

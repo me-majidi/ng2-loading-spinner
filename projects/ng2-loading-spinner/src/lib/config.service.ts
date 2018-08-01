@@ -12,14 +12,15 @@ export class ConfigService {
             animationType  : ANIMATION_TYPES.dualCircle,
             backdropColor  : 'rgba(0, 0, 0, 0.3)',
             spinnerColor   : '#fff',
-            spinnerPosition: 'center'
+            spinnerPosition: 'center',
+            backdropBorderRadius: '0'
         };
     }
 
     normalizeConfigs(config: INg2LoadingSpinnerConfig) {
         if (!config) {
             config = this.defaultConfig;
-            return;
+            return config;
         }
 
         for (let option in this.defaultConfig) {
@@ -27,5 +28,7 @@ export class ConfigService {
                 config[ option ] = this.defaultConfig[ option ];
             }
         }
+
+        return config;
     }
 }

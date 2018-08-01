@@ -1,4 +1,4 @@
-import { ComponentFactoryResolver, ComponentRef, Directive, Input, OnChanges, OnDestroy, OnInit, Renderer2, SimpleChanges, TemplateRef, ViewContainerRef } from '@angular/core';
+import { ComponentFactoryResolver, ComponentRef, Directive, ElementRef, HostBinding, Input, OnChanges, OnDestroy, OnInit, Renderer2, SimpleChanges, TemplateRef, ViewContainerRef } from '@angular/core';
 import { Ng2LoadingSpinnerComponent } from './ng2-loading-spinner.component';
 import { ConfigService } from './config.service';
 
@@ -15,12 +15,15 @@ export class Ng2LoadingSpinnerDirective implements OnInit, OnChanges, OnDestroy 
     private spinnerComponentRef: ComponentRef<Ng2LoadingSpinnerComponent>;
 
     constructor (
+        private el: ElementRef,
         private vcRef: ViewContainerRef,
         private cfResolver: ComponentFactoryResolver,
         private renderer: Renderer2,
         private configService: ConfigService) {}
 
-    ngOnInit () {}
+    ngOnInit () {
+        this.setPosition();
+    }
 
     ngOnChanges (changes: SimpleChanges) {
         if (changes.show.currentValue) {
@@ -34,12 +37,21 @@ export class Ng2LoadingSpinnerDirective implements OnInit, OnChanges, OnDestroy 
         this.destroySpinner();
     }
 
+    setPosition() {
+        const elPosition = this.el.nativeElement.style.position;
+        if (elPosition === 'relative' || elPosition === 'absolute') {
+            return;
+        }
+
+        this.el.nativeElement.style.position = 'relative';
+    }
+
     createSpinner () {
         const spinnerCF          = this.cfResolver.resolveComponentFactory(Ng2LoadingSpinnerComponent);
         this.spinnerComponentRef = this.vcRef.createComponent(spinnerCF);
 
 
-        this.configService.normalizeConfigs(this.config);
+        this.config = this.configService.normalizeConfigs(this.config);
         this.spinnerComponentRef.instance.config   = this.config;
         this.spinnerComponentRef.instance.template = this.template;
 
