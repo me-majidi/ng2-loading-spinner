@@ -215,11 +215,11 @@
                 <p class="font-weight-bold text-center text-muted">LOGIN</p>
                 <form class="d-flex flex-column">
                     <label class="sr-only"
-                           for="username">Username
+                           for="username">Email
                     </label>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <div class="input-group-text">@</div>
+                            <div class="input-group-text"><i class="fas fa-envelope"></i></div>
                         </div>
                         <input type="text"
                                class="form-control"
@@ -231,12 +231,12 @@
                     </label>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <div class="input-group-text">@</div>
+                            <div class="input-group-text"><i class="fas fa-unlock-alt"></i></div>
                         </div>
-                        <input type="text"
+                        <input type="password"
                                class="form-control"
                                id="password"
-                               placeholder="Username">
+                               placeholder="Password">
                     </div>
                     <a class="btn btn-success d-inline-block px-5 py-2 text-white"
                        (click)="showLoading()">Login
