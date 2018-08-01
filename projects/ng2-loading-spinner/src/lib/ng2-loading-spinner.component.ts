@@ -86,6 +86,18 @@ import { Ng2LoadingSpinnerConfig } from './config';
         right     : 5px;
         transform : translateY(-50%);
       }
+      
+      .top {
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .bottom {
+        bottom: 5px;
+        left      : 50%;
+        transform : translateX(-50%);
+      }
 
       .top-right {
         top   : 5px;
@@ -167,8 +179,22 @@ import { Ng2LoadingSpinnerConfig } from './config';
       /* SCALING BARS SPINNER */
       /***********************/
 
-      .scaling-bars {
-        left : 1.5em;
+      .center .scaling-bars,
+      .top .scaling-bars,
+      .bottom .scaling-bars {
+        left: 0;
+      }
+      
+      .left .scaling-bars,
+      .top-left .scaling-bars,
+      .top-bottom .scaling-bars {
+        left: 1.5em;
+      }
+      
+      .right .scaling-bars,
+      .top-right .scaling-bars,
+      .bottom-right .scaling-bars {
+        right: 1.5em;
       }
 
       .scaling-bars,
@@ -178,14 +204,14 @@ import { Ng2LoadingSpinnerConfig } from './config';
         -webkit-animation : scaling-bars-anim 1s infinite ease-in-out;
         animation         : scaling-bars-anim 1s infinite ease-in-out;
         width             : 1em;
-        height            : 4em;
+        height            : 2em;
       }
 
       .scaling-bars {
         color                   : currentColor;
         text-indent             : -9999em;
         position                : relative;
-        font-size               : inherit;
+        font-size               : .5em;
         -webkit-transform       : translateZ(0);
         -ms-transform           : translateZ(0);
         transform               : translateZ(0);

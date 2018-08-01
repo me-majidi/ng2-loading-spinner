@@ -38,7 +38,7 @@ export class AppComponent {
     showLoading() {
         this.show = true;
         setTimeout(() => {
-            this.show = false;
+//            this.show = false;
         }, 2000);
     }
 
