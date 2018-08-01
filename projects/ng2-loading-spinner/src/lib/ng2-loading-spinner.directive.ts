@@ -26,10 +26,12 @@ export class Ng2LoadingSpinnerDirective implements OnInit, OnChanges, OnDestroy 
     }
 
     ngOnChanges (changes: SimpleChanges) {
-        if (changes.show.currentValue) {
-            this.createSpinner();
-        } else {
-            this.destroySpinner();
+        if (changes.show) {
+            if (changes.show.currentValue) {
+                this.createSpinner();
+            } else {
+                this.destroySpinner();
+            }
         }
     }
 
