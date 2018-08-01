@@ -12,7 +12,7 @@ export class AppComponent {
     @ViewChild('customTemplate') customTemplate: TemplateRef<any>;
     show = false;
     borderRadius = 15;
-    fontSize = 16;
+    fontSize;
     template = null;
 
     loadingConfig: INg2LoadingSpinnerConfig = {
@@ -22,7 +22,7 @@ export class AppComponent {
         spinnerPosition: 'center',
         backdropBorderRadius: '15px',
         spinnerSize: 'md',
-        spinnerFontSize: '1rem'
+        spinnerFontSize: ''
     };
 
     btnLoadingConfig: INg2LoadingSpinnerConfig = {

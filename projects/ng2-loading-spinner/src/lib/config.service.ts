@@ -25,7 +25,7 @@ export class ConfigService {
             return config;
         }
 
-        if (config.spinnerSize === '') {
+        if (config.spinnerSize === '' && config.spinnerFontSize === '') {
             config.spinnerFontSize = '1rem';
         }
 
