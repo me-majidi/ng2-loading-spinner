@@ -62,28 +62,27 @@
     </div>
 </nav>
 <main class="mt-5">
+
+
+    <ng-template #template>
+        <div class="ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </ng-template>
+
     <div class="container spinners-gallery">
-        <div class="spinner">
-            <div class="dual-circle"></div>
-        </div>
-        <div class="spinner">
-            <div class="ring">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-        <div class="spinner">
-            <div class="roller">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+        <div class="row w-100">
+            <div class="col-4 position-relative">
+                <button [ng2-loading]="show"
+                        [config]="loadingCongif"
+                        [template]=""
+                        class="btn btn-success btn-block position-relative py-5"
+                        (click)="login()">
+                    Login
+                </button>
             </div>
         </div>
     </div>
