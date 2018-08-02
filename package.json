@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-lib": "ng build --prod ng2-loading-spinner",
+    "npm-pack": "cd ./dist/ng2-loading-spinner && npm pack",
+    "package": "npm run build-lib && npm run npm-pack"
   },
   "private": true,
   "dependencies": {

@@ -9,7 +9,7 @@ export class ConfigService {
 
     constructor() {
         this.defaultConfig = {
-            animationType  : ANIMATION_TYPES.dualCircle,
+            animationType  : ANIMATION_TYPES.fadingCircle,
             backdropColor  : 'rgba(0, 0, 0, 0.3)',
             spinnerColor   : '#fff',
             spinnerPosition: 'center',
