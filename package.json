@@ -10,7 +10,9 @@
     "e2e": "ng e2e",
     "build-lib": "ng build --prod ng2-loading-spinner",
     "npm-pack": "cd ./dist/ng2-loading-spinner && npm pack",
-    "package": "npm run build-lib && npm run npm-pack"
+    "package": "npm run build-lib && npm run npm-pack",
+    "build:ghpage": "ng build --prod --base-href 'https://me-majidi.github.io/ng2-loading-spinner/'",
+    "publish:ghpage": "ngh --dir dist/ng2-loading-spinner-app --message='Update gh-page' --branch=gh-pages --repo='git@github.com:me-majidi/ng2-loading-spinner.git'"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +24,7 @@
     "@angular/http": "^6.0.3",
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
+    "@angular/pwa": "^0.7.2",
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
     "ngx-color-picker": "^6.5.0",

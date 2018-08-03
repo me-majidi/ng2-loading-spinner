@@ -1,13 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { Ng2LoadingSpinnerModule } from '../../projects/ng2-loading-spinner/src/public_api';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { BusyModule } from 'angular2-busy';
 import { ColorPickerModule } from 'ngx-color-picker';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -15,11 +13,9 @@ import { FormsModule } from '@angular/forms';
     ],
     imports     : [
         BrowserModule,
+        FormsModule,
         Ng2LoadingSpinnerModule,
-        BrowserAnimationsModule,
-        BusyModule,
-        ColorPickerModule,
-        FormsModule
+        ColorPickerModule
     ],
     providers   : [],
     bootstrap   : [ AppComponent ]
