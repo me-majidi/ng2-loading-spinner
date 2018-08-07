@@ -27,6 +27,7 @@
     "@angular/pwa": "^0.7.2",
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
+    "ng2-loading-spinner": "^1.0.1",
     "ngx-color-picker": "^6.5.0",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.2.2",
