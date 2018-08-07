@@ -2,10 +2,9 @@
   <img height="200px" width="200px" style="text-align: center;" src="https://cdn.rawgit.com/me-majidi/ng2-loading-spinner/e284608f/assets/logo.svg">
 </p>
 <h1>Ng2-loading-spinner</h1>
-<p>Customisable loading spinner for angular4+ applications</p>
+<h5>Customisable loading spinner for angular applications</h5>
 
-
-
+[![Build Status](https://travis-ci.com/me-majidi/ng2-loading-spinner.svg?branch=master)](https://travis-ci.com/me-majidi/ng2-loading-spinner)<hr>
 
 
 <img width="600px" src="https://cdn.rawgit.com/me-majidi/ng2-loading-spinner/b7d6877e/assets/demo_img1.gif">
