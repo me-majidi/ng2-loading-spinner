@@ -1,0 +1,44 @@
+{
+  "name": "ng2-loading-spinner",
+  "version": "1.0.1",
+  "author": {
+    "name": "Mehran Majidi",
+    "email": "me.majiidii@gmail.com"
+  },
+  "description": "Configurable loading spinner for Angular4+ applications",
+  "homepage": "https://github.com/me-majidi/ng2-loading-spinner",
+  "keywords": [
+    "Angular",
+    "Angular 5",
+    "ng",
+    "Angular 6",
+    "Angular 4",
+    "load",
+    "loading",
+    "spinner",
+    "Angular loading spinner",
+    "custom spinner",
+    "custom loading spinner",
+    "ng2-loading-spinner",
+    "Angular 4 loading",
+    "Angular 6 loading",
+    "Angular 4 laoding spinner",
+    "Angular 5 loading spinner",
+    "Angular 6 loading spinner",
+    "wait",
+    "angular 2 template loading",
+    "angular 4 template loading",
+    "angular 5 template loading",
+    "angular 6 template loading",
+    "angular css spinner"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/me-majidi/ng2-loading-spinner.git"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  }
+}
