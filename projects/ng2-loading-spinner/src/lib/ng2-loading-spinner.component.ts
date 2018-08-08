@@ -52,6 +52,9 @@ import { Ng2LoadingSpinnerConfig } from './config';
                     <div class="sk-circle11 sk-circle"></div>
                     <div class="sk-circle12 sk-circle"></div>
                 </div>
+                
+                <!-- HALF CIRCLE -->
+                <div *ngIf="config?.animationType === ANIMATION_TYPES.halfCircle" class="half-circle"></div>
             </ng-container>
 
             <ng-container *ngTemplateOutlet="template"
@@ -555,6 +558,29 @@ import { Ng2LoadingSpinnerConfig } from './config';
         0%, 39%, 100% { opacity : 0; }
         40% { opacity : 1; }
       }
+
+      /***********************/
+      /* HALF CIRCLE SPINNER */
+      /***********************/
+      
+      .half-circle {
+        width             : 2em;
+        height            : 2em;
+        display           : inline-block;
+        border            : .2em solid transparent;
+        border-left-color : currentColor;
+        border-top-color  : currentColor;
+        animation         : rotate 600ms infinite linear;
+        border-radius     : 50%;
+      }
+
+      @keyframes rotate {
+        to {
+          transform : rotate(1turn)
+        }
+      }
+        
+        
     ` ]
 })
 export class Ng2LoadingSpinnerComponent implements OnInit {

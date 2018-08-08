@@ -3,5 +3,6 @@ export const ANIMATION_TYPES  = {
     scalingBars: 'scalingBars',
     chasingDots: 'chasingDots',
     bouncingDots: 'bouncingDots',
-    fadingCircle: 'fadingCircle'
+    fadingCircle: 'fadingCircle',
+    halfCircle: 'halfCircle'
 };
