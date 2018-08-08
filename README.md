@@ -19,6 +19,7 @@
 
 
 <a name="Table of contents" />
+
 ## Table of contents
  -  [Online Demo](https://me-majidi.github.io/ng2-loading-spinner/)
  -  [Installation](https://www.npmjs.com/package/ng2-loading-spinner#installation)
@@ -32,6 +33,7 @@
 
 
 <a name="Installation" />
+
 ## Installation
 ```shell
 npm install --save ng2-loading-spinner
@@ -39,6 +41,7 @@ npm install --save ng2-loading-spinner
 
 
 <a name="Usage" />
+
 ## Usage
 Import  `Ng2LoadingSpinnerModule` in your module
 
@@ -80,9 +83,11 @@ export class AppComponent {
 <br><br>
 <br><br>
 <a name="API" />
+
 ## API	
 
 <a name="Input parameters" />
+
 #### Input parameters
 Input | Type  | Required |  Description |
 ------ | ----- | ----- | ----- |
@@ -92,6 +97,7 @@ template | TemplateRef | Optional | If provided, the custom template will be sho
 
 
 <a name="Configurable options" />
+
 #### Configurable options
 
 Option | Required | type | Default value | Description | Examples |
@@ -109,6 +115,7 @@ spinnerFontSize | Optional | string | | Option for controlling size of spinner.I
 
 <br><br><br>
 <a name="Available spinner positions" />
+
 #### Available spinner positions:
 Position |
 ------ |
@@ -126,6 +133,7 @@ bottom-left |
 
 <br><br>
 <a name="Available spinner sizes" />
+
 #### Available spinner sizes:
 Size |
 ------ |
@@ -146,10 +154,12 @@ xl |
 
 
 <a name="Examples" />
+
 ## Examples
 
 
 <a name="Example 1 - with custom configuration options" />
+
 #### Example 1 - with custom configuration options
 
 ``` typescript
@@ -200,6 +210,7 @@ export class Example1Component {
 ```
 
 <a name="Example2 - using custom template" />
+
 #### Example2 - using custom template
 
 ``` typescript
