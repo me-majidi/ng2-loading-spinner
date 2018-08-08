@@ -1,11 +1,11 @@
 {
   "name": "ng2-loading-spinner",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": {
     "name": "Mehran Majidi",
     "email": "me.majiidii@gmail.com"
   },
-  "description": "Configurable loading spinner for Angular4+ applications",
+  "description": "customisable loading spinner for Angular4+ applications",
   "homepage": "https://github.com/me-majidi/ng2-loading-spinner",
   "keywords": [
     "Angular",
