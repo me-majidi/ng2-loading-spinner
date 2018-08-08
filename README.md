@@ -4,7 +4,7 @@
 <h1>Ng2-loading-spinner</h1>
 <h5>Customisable loading spinner for angular applications</h5>
 
-
+[![npm version](https://badge.fury.io/js/ng2-loading-spinner.svg)](https://www.npmjs.com/package/ng2-loading-spinner)
 [![npm](https://img.shields.io/badge/Demo-online-red.svg)](https://me-majidi.github.io/ng2-loading-spinner)
 [![Build Status](https://travis-ci.com/me-majidi/ng2-loading-spinner.svg?branch=master)](https://travis-ci.com/me-majidi/ng2-loading-spinner)<br>
 
