@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { Ng2LoadingSpinnerModule } from 'ng2-loading-spinner';
 
+
 @NgModule({
     declarations: [
         AppComponent
