@@ -1,7 +1,10 @@
 <p align="center">
   <img height="200px" width="200px" style="text-align: center;" src="https://cdn.rawgit.com/me-majidi/ng2-loading-spinner/e284608f/assets/logo.svg">
 </p>
+<a name="ng2-loading-spinner" />
 <h1>Ng2-loading-spinner</h1>
+
+<a name="Customisable loading spinner for angular applications" />
 <h5>Customisable loading spinner for angular applications</h5>
 
 [![npm version](https://badge.fury.io/js/ng2-loading-spinner.svg)](https://www.npmjs.com/package/ng2-loading-spinner)
@@ -15,6 +18,8 @@
 
 
 
+<a name="Table of contents" />
+
 ## Table of contents
  -  [Online Demo](https://me-majidi.github.io/ng2-loading-spinner/)
  -  [Installation](https://www.npmjs.com/package/ng2-loading-spinner#installation)
@@ -27,12 +32,15 @@
 
 
 
+<a name="Installation" />
 
 ## Installation
 ```shell
 npm install --save ng2-loading-spinner
 ```
 
+
+<a name="Usage" />
 
 ## Usage
 Import  `Ng2LoadingSpinnerModule` in your module
@@ -74,7 +82,11 @@ export class AppComponent {
 
 <br><br>
 <br><br>
+<a name="API" />
+
 ## API	
+
+<a name="Input parameters" />
 
 #### Input parameters
 Input | Type  | Required |  Description |
@@ -84,7 +96,10 @@ config | INg2LoadingSpinnerConfig | Optional | Configuartion object for spinner.
 template | TemplateRef | Optional | If provided, the custom template will be shown in place of the default spinner animations. You can use this for rendering custom spinners instead of default spinner animations |
 
 
+<a name="Configurable options" />
+
 #### Configurable options
+
 Option | Required | type | Default value | Description | Examples |
 --- | --- | --- | --- | --- | ---- |
 animationType | Optional | string | ANIMATION_TYPES.fadingCircle | The spinner animation to be used. import ANIMATION_TYPES constant to select valid  options. | ANIMATION_TYPES.chasingDots |
@@ -99,6 +114,8 @@ spinnerFontSize | Optional | string | | Option for controlling size of spinner.I
 
 
 <br><br><br>
+<a name="Available spinner positions" />
+
 #### Available spinner positions:
 Position |
 ------ |
@@ -115,6 +132,8 @@ bottom-left |
 
 
 <br><br>
+<a name="Available spinner sizes" />
+
 #### Available spinner sizes:
 Size |
 ------ |
@@ -134,8 +153,12 @@ xl |
 
 
 
+<a name="Examples" />
 
 ## Examples
+
+
+<a name="Example 1 - with custom configuration options" />
 
 #### Example 1 - with custom configuration options
 
@@ -185,6 +208,8 @@ export class Example1Component {
    Show Spinner
 </button>
 ```
+
+<a name="Example2 - using custom template" />
 
 #### Example2 - using custom template
 
