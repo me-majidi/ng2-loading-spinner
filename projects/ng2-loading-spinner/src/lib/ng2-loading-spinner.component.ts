@@ -58,7 +58,7 @@ import { Ng2LoadingSpinnerConfig } from './config';
             </ng-container>
 
             <ng-container *ngTemplateOutlet="template"
-                          ngStyle="styles"></ng-container>
+                          [ngStyle]="styles"></ng-container>
         </div>
     `,
     styles  : [ `

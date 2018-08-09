@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { INg2LoadingSpinnerConfig } from './config';
 import { ANIMATION_TYPES } from './animation-types';
+import { findIndex, objectValues } from './utils';
 
 @Injectable()
 export class ConfigService {
@@ -33,6 +34,10 @@ export class ConfigService {
             if (!config[ option ]) {
                 config[ option ] = this.defaultConfig[ option ];
             }
+        }
+
+        if (findIndex(objectValues(ANIMATION_TYPES), config[ 'animationType' ]) === -1) {
+            config['animationType'] = ANIMATION_TYPES.fadingCircle;
         }
 
         return config;
