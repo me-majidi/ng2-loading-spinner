@@ -57,8 +57,7 @@ import { Ng2LoadingSpinnerConfig } from './config';
                 <div *ngIf="config?.animationType === ANIMATION_TYPES.halfCircle" class="half-circle"></div>
             </ng-container>
 
-            <ng-container *ngTemplateOutlet="template"
-                          [ngStyle]="styles"></ng-container>
+            <ng-container *ngTemplateOutlet="template"></ng-container>
         </div>
     `,
     styles  : [ `
