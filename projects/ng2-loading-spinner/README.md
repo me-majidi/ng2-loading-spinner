@@ -25,7 +25,7 @@
  -  [Installation](https://www.npmjs.com/package/ng2-loading-spinner#installation)
  -  [Usage](https://www.npmjs.com/package/ng2-loading-spinner#usage)
   - [API](https://www.npmjs.com/package/ng2-loading-spinner#api)
-  - [Examples](https://www.npmjs.com/package/ng2-loading-spinner#example)
+  - [Examples](https://www.npmjs.com/package/ng2-loading-spinner#examples)
  
 
 
