@@ -73,7 +73,7 @@ export class AppComponent {
     
     
     constructor() {
-    	setTimeOut(() => {
+    	setTimeout(() => {
         	this.showSpinner = false;
         }, 1500);
     }
