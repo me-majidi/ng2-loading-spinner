@@ -9,14 +9,14 @@ export class ConfigService {
     private readonly defaultConfig: INg2LoadingSpinnerConfig;
 
     constructor(@Optional() @Inject('loadingConfig') private config: INg2LoadingSpinnerConfig) {
-        this.defaultConfig = this.config || {
-            animationType: ANIMATION_TYPES.fadingCircle,
-            backdropColor: 'rgba(0, 0, 0, 0.3)',
-            spinnerColor: '#fff',
-            spinnerPosition: 'center',
-            backdropBorderRadius: '0',
-            spinnerSize: 'md',
-            spinnerFontSize: ''
+        this.defaultConfig =  {
+            animationType: this.config.animationType || ANIMATION_TYPES.fadingCircle,
+            backdropColor: this.config.backdropColor || 'rgba(0, 0, 0, 0.3)',
+            spinnerColor: this.config.spinnerColor || '#fff',
+            spinnerPosition: this.config.spinnerPosition || 'center',
+            backdropBorderRadius: this.config.backdropBorderRadius || '0',
+            spinnerSize: this.config.spinnerSize || 'md',
+            spinnerFontSize: this.config.spinnerFontSize || ''
         };
     }
 
@@ -30,7 +30,7 @@ export class ConfigService {
             config.spinnerFontSize = '1rem';
         }
 
-        for (let option in this.defaultConfig) {
+        for (const option in this.defaultConfig) {
             if (!config[option]) {
                 config[option] = this.defaultConfig[option];
             }
