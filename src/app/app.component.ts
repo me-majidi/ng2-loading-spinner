@@ -18,7 +18,6 @@ export class AppComponent {
     loadingConfig: INg2LoadingSpinnerConfig = {
         animationType  : ANIMATION_TYPES.dualCircle,
         backdropColor  : 'rgba(0, 0, 0, 0.3)',
-        spinnerColor   : '#fff',
         spinnerPosition: 'center',
         backdropBorderRadius: '15px',
         spinnerSize: 'md',
@@ -29,7 +28,8 @@ export class AppComponent {
         animationType: ANIMATION_TYPES.fadingCircle,
         backdropColor: 'transparent',
         spinnerPosition: 'left',
-        spinnerSize: 'xs'
+        spinnerSize: 'xs',
+        spinnerColor: 'green'
     };
 
     constructor () {

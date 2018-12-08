@@ -17,7 +17,7 @@ export class Ng2LoadingSpinnerConfig implements INg2LoadingSpinnerConfig {
     spinnerSize: string;
     spinnerFontSize: string;
 
-    constructor(config : INg2LoadingSpinnerConfig) {
+    constructor(private config: INg2LoadingSpinnerConfig) {
         this.animationType = config.animationType;
         this.backdropColor = config.backdropColor;
         this.spinnerColor = config.spinnerColor;
