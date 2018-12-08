@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="200px" width="200px" style="text-align: center;" src="https://cdn.rawgit.com/me-majidi/ng2-loading-  spinner/e284608f/assets/logo.svg">
+  <img height="200px" width="200px" style="text-align: center;" src="https://raw.githubusercontent.com/me-majidi/ng2-loading-spinner/master/src/assets/logo.png">
 </p>
 <a name="ng2-loading-spinner" />
 <h1>Ng2-loading-spinner</h1>
