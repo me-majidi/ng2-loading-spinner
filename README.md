@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="200px" width="200px" style="text-align: center;" src="https://cdn.rawgit.com/me-majidi/ng2-loading-spinner/e284608f/assets/logo.svg">
+  <img height="200px" width="200px" style="text-align: center;" src="https://cdn.rawgit.com/me-majidi/ng2-loading-  spinner/e284608f/assets/logo.svg">
 </p>
 <a name="ng2-loading-spinner" />
 <h1>Ng2-loading-spinner</h1>
@@ -50,18 +50,18 @@ import { NgModule } from '@angular/core';
 import { Ng2LoadingSpinnerModule } from 'ng2-loading-spinner'
 
 @NgModule({
-  imports: [ Ng2LoadingSpinnerModule ]
+  imports: [ Ng2LoadingSpinnerModule.forRoot({}) ]
 })
 export class TestModule { }
 ```
-then, use `ng2-loading` directive on element which you want spinner:
+then, use the `ng2-loading` directive on the element you want to have a spinner on:
 ```html
 <div class="card"
   [ng2-loading]="showSpinner">
     ...
 </div>
 ```
-directive expects a boolean for showing and removing Loading spinner:
+the directive expects a boolean for showing and removing Loading spinner:
 ``` typescript
 @Component({
     selector   : 'app.component',
@@ -69,11 +69,11 @@ directive expects a boolean for showing and removing Loading spinner:
     styleUrls  : [ './app.component.css' ]
 })
 export class AppComponent {
-    showSpinner: boolean = false;
+    showSpinner: boolean = true;
     
     
     constructor() {
-    	setTimeOut(() => {
+    	setTimeout(() => {
         	this.showSpinner = false;
         }, 1500);
     }
@@ -99,6 +99,7 @@ template | TemplateRef | Optional | If provided, the custom template will be sho
 <a name="Configurable options" />
 
 #### Configurable options
+Config options can be set globally using the forRoot module import statement as well as being passed into each loader instance.Options passed to the instance of loader will override each global options.
 
 Option | Required | type | Default value | Description | Examples |
 --- | --- | --- | --- | --- | ---- |
@@ -161,6 +162,18 @@ xl |
 <a name="Example 1 - with custom configuration options" />
 
 #### Example 1 - with custom configuration options
+```typescript
+import { NgModule } from '@angular/core';
+import { Ng2LoadingSpinnerModule } from 'ng2-loading-spinner'
+
+@NgModule({
+  imports: [ Ng2LoadingSpinnerModule.forRoot({
+    backdropColor  : 'rgba(0, 0, 0, 0.3)',
+    spinnerColor   : '#fff',
+  }) ]
+})
+export class TestModule { }
+```
 
 ``` typescript
 import { Component } from '@angular/core';
@@ -178,8 +191,6 @@ export class Example1Component {
 
     loadingConfig: INg2LoadingSpinnerConfig = {
         animationType  : ANIMATION_TYPES.dualCircle,
-        backdropColor  : 'rgba(0, 0, 0, 0.3)',
-        spinnerColor   : '#fff',
         spinnerPosition: 'left',
         backdropBorderRadius: '15px',
         spinnerSize: 'md',
