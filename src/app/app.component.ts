@@ -1,4 +1,4 @@
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import {AfterContentChecked, Component, TemplateRef, ViewChild} from '@angular/core';
 import { ANIMATION_TYPES } from '../../projects/ng2-loading-spinner/src/public_api';
 import { INg2LoadingSpinnerConfig } from '../../projects/ng2-loading-spinner/src/lib/config';
 import { NgForm } from '@angular/forms';
@@ -8,20 +8,22 @@ import { NgForm } from '@angular/forms';
     templateUrl: './app.component.html',
     styleUrls  : [ './app.component.scss' ]
 })
-export class AppComponent {
+export class AppComponent implements  AfterContentChecked {
     @ViewChild('customTemplate') customTemplate: TemplateRef<any>;
     show = false;
     borderRadius = 15;
     fontSize;
     template = null;
+    initialized: boolean;
 
     loadingConfig: INg2LoadingSpinnerConfig = {
-        animationType  : ANIMATION_TYPES.dualCircle,
+        animationType  : ANIMATION_TYPES.cubeGrid,
         backdropColor  : 'rgba(0, 0, 0, 0.3)',
         spinnerPosition: 'center',
         backdropBorderRadius: '15px',
         spinnerSize: 'md',
-        spinnerFontSize: ''
+        spinnerFontSize: '',
+        spinnerColor: '#fff'
     };
 
     btnLoadingConfig: INg2LoadingSpinnerConfig = {
@@ -29,10 +31,14 @@ export class AppComponent {
         backdropColor: 'transparent',
         spinnerPosition: 'left',
         spinnerSize: 'xs',
-        spinnerColor: 'green'
+        spinnerColor: 'green',
     };
 
     constructor () {
+    }
+
+    ngAfterContentChecked() {
+        this.initialized = true;
     }
 
     showLoading() {

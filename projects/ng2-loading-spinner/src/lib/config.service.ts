@@ -8,7 +8,7 @@ export class ConfigService {
 
     private readonly defaultConfig: INg2LoadingSpinnerConfig;
 
-    constructor(@Optional() @Inject('loadingConfig') private config: INg2LoadingSpinnerConfig) {
+    constructor(@Inject('loadingConfig') @Optional() private readonly config: INg2LoadingSpinnerConfig) {
         this.config = this.config || {};
         this.defaultConfig =  {
             animationType: this.config.animationType || ANIMATION_TYPES.fadingCircle,

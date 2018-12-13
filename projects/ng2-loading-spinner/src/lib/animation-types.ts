@@ -4,5 +4,6 @@ export const ANIMATION_TYPES  = {
     chasingDots: 'chasingDots',
     bouncingDots: 'bouncingDots',
     fadingCircle: 'fadingCircle',
-    halfCircle: 'halfCircle'
+    halfCircle: 'halfCircle',
+    cubeGrid: 'cubeGrid'
 };

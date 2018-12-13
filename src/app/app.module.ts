@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
 import { ColorPickerModule } from 'ngx-color-picker';
-import { Ng2LoadingSpinnerModule } from 'ng2-loading-spinner';
+import {Ng2LoadingSpinnerModule} from '../../projects/ng2-loading-spinner/src/public_api';
 
 
 @NgModule({
