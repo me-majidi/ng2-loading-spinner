@@ -9,6 +9,7 @@ export class ConfigService {
     private readonly defaultConfig: INg2LoadingSpinnerConfig;
 
     constructor(@Optional() @Inject('loadingConfig') private config: INg2LoadingSpinnerConfig) {
+        this.config = this.config || {};
         this.defaultConfig =  {
             animationType: this.config.animationType || ANIMATION_TYPES.fadingCircle,
             backdropColor: this.config.backdropColor || 'rgba(0, 0, 0, 0.3)',
